@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Linear Hashing</title>
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+        
+      }
+
+      h1 {
+        color: rgb(255, 255, 255);
+        padding-top: 1%;
+        text-align: center;
+      }
+
+      canvas {
+        background-color: rgb(44, 47, 53);
+        background-image: linear-gradient(rgb(80, 76, 76), rgb(0, 0, 0));
+      }
+
+      .modal-header,
+      h4,
+      .close {
+        background-color: rgb(65, 30, 30);
+        color: white !important;
+        text-align: center;
+        font-size: 30px;
+      }
+      .flex-container > div {
+        height: 10em;
+}
+    </style>
+  </head>
+
+  <body style="padding: 0; margin: 0;">
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar" style="color: #ffffff;">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="\new.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-hashtag"></i> Home</a>
+        <a href="\MCQ\index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-pencil"></i> MCQs</a>
+        <a href="\Hashing Horizons\index.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-code"></i> Visualize</a>
+        <a href="\references.html" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-folder"></i> References</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        </a>
+      </div>
+    
+      <!-- Navbar on small screens -->
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="\new.html" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="\.\MCQ\index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">MCQs</a>
+        <a href="index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Visualize</a>
+        <a href="\references.html" class="w3-bar-item w3-button" onclick="toggleFunction()">References</a>
+        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+      </div>
+    </div>
+    <h1 id="h1"  >Hashing Horizons - Visualisation</h1>
+    <br>
+    <!-- Modal -->
+     <div class="modal fade" id="errorModel" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Error Occurred</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body" id="model-body">
+            <p></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<div style="height: max-content;">
+    <script src="bootstrap/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/popper.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+
+    <script src="p5/p5.min.js"></script>
+    <script src="p5/p5.dom.min.js"></script>
+    <script src="LinearHashing.js"></script>
+    <script src="sketch.js"></script>
+</div>
+<script>
+  // Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+  </body>
+
+</html>
