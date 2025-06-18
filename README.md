@@ -72,3 +72,10 @@ Web interface structure with:
 ### Collision Scenarios
 
 The tool automatically detects and visualizes collisions, showing how different probing methods resolve conflicts when multiple keys hash to the same index.
+
+## Resources
+![image](https://github.com/user-attachments/assets/350ca47f-ae00-4543-8fdb-932723b00447)
+
+![image](https://github.com/user-attachments/assets/4980b801-e2f3-4502-9da8-42148567763b)
+
+
